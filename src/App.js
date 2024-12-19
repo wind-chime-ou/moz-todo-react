@@ -6,6 +6,8 @@ import { useState } from "react";
 
 function App(props) {
 
+  console.log("hello");
+
   const [tasks, setTasks] = useState(props.tasks);
 
   function addTask(name) {
