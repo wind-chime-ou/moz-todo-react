@@ -6,7 +6,7 @@ import { useState } from "react";
 
 function App(props) {
 
-  console.log("hello");
+  console.log("test merge");
 
   const [tasks, setTasks] = useState(props.tasks);
 
