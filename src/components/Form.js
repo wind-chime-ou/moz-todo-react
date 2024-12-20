@@ -1,19 +1,19 @@
-import React from "react";
+import React, { use, useEffect } from "react";
 import { useState } from "react";
 
 function Form(props) {
 
-    function handleChange(event) {
-        setName(event.target.value);
-      }
+  function handleChange(event) {
+    setName(event.target.value);
+  }
 
-    const [name, setName] = useState("");
+  const [name, setName] = useState("");
 
-    function handleSubmit(event) {
-        event.preventDefault();
-        props.addTask(name);
-        setName("");
-      }
+  function handleSubmit(event) {
+    event.preventDefault();
+    props.addTask(name);
+    setName("");
+  }
 
   return (
     <form onSubmit={handleSubmit} >
@@ -34,7 +34,7 @@ function Form(props) {
       <button type="submit" className="btn btn__primary btn__lg">
         Add
       </button>
-    </form> 
+    </form>
   );
 }
 
